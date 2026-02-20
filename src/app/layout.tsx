@@ -1,3 +1,4 @@
+import './globals.css';
 import Footer from './ui/components/website/Footer';
 import Header from './ui/components/website/Header';
 
