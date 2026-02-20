@@ -1,9 +1,17 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import serverConfig from '@/app/envConfig/server';
 import { ContactFormSchema } from '@/app/lib/validations/contact';
 
+const FORMSPREE_FORM_ID = process.env.FORMSPREE_FORM_ID;
+
 export async function POST(request: NextRequest) {
+  if (!FORMSPREE_FORM_ID) {
+    return NextResponse.json(
+      { success: false, message: 'Form not configured' },
+      { status: 500 }
+    );
+  }
+
   try {
     const body = await request.json();
 
@@ -19,29 +27,33 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const apiUrl = serverConfig.API_URL || 'http://localhost:8080';
-    const upstream = new URL('/api/v1/contact', apiUrl);
-    const resp = await fetch(upstream.toString(), {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(validatedFields.data),
-      cache: 'no-store',
-    });
-
-    const json = await resp.json().catch(() => null);
-    if (!resp.ok) {
-      return NextResponse.json(
-        json ?? {
-          success: false,
-          message: 'Error del servidor. Por favor, intenta más tarde.',
+    const response = await fetch(
+      `https://formspree.io/f/${FORMSPREE_FORM_ID}`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
         },
-        { status: resp.status },
+        body: JSON.stringify({
+          name: validatedFields.data.name,
+          email: validatedFields.data.email,
+          message: validatedFields.data.message,
+        }),
+      }
+    );
+
+    if (!response.ok) {
+      return NextResponse.json(
+        { success: false, message: 'Error al enviar el mensaje.' },
+        { status: response.status }
       );
     }
 
-    return NextResponse.json(json, { status: 200 });
+    return NextResponse.json({
+      success: true,
+      message: '¡Gracias! Hemos recibido tu mensaje y te contactaremos pronto.',
+    });
   } catch (error) {
     console.error('/api/contact error:', error);
     return NextResponse.json(
