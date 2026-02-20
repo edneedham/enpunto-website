@@ -1,3 +1,4 @@
+// Contact page
 import ContactForm from '@/app/ui/forms/contact';
 
 export default function ContactPage() {
