@@ -1,6 +1,9 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
+  turbopack: {
+    rootDirectory: '.',
+  },
   async rewrites() {
     const apiUrl = process.env.API_URL || 'http://localhost:8080';
     return [
