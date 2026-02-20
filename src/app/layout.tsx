@@ -1,5 +1,5 @@
-import Footer from '@/app/ui/components/website/Footer';
-import Header from '@/app/ui/components/website/Header';
+import Footer from './ui/components/website/Footer';
+import Header from './ui/components/website/Header';
 
 export default function WebsiteLayout({
   children,

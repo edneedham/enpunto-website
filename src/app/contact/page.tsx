@@ -1,5 +1,5 @@
 // Contact page
-import ContactForm from '@/app/ui/forms/contact';
+import ContactForm from '../ui/forms/contact';
 
 export default function ContactPage() {
   return (

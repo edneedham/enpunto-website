@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import { ContactFormSchema } from '@/app/lib/validations/contact';
+import { ContactFormSchema } from '../../lib/validations/contact';
 
 const FORMSPREE_FORM_ID = process.env.FORMSPREE_FORM_ID;
 

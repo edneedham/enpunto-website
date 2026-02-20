@@ -2,8 +2,8 @@
 
 import { useState, useTransition } from 'react';
 import { Mail, User, MessageSquare } from 'lucide-react';
-import { ContactFormState } from '@/app/lib/validations/contact';
-import SubmitArea from '@/app/ui/components/shared/Submit';
+import { ContactFormState } from '../../lib/validations/contact';
+import SubmitArea from '../components/shared/Submit';
 
 export default function ContactForm() {
   const [state, setState] = useState<ContactFormState>({ success: false });
