@@ -45,7 +45,7 @@ export default async function PlataformaPage() {
                   href="/contact?subject=plataforma"
                   className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200 text-lg shadow-lg hover:shadow-xl"
                 >
-                  Registrate para Recibir Actualizaciones
+                  Contactanos para Recibir Actualizaciones
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </div>
@@ -378,7 +378,7 @@ export default async function PlataformaPage() {
               href="/contact?subject=plataforma"
               className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-200 text-lg shadow-lg hover:shadow-xl"
             >
-              Registrate Ahora
+              Contactanos
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>
