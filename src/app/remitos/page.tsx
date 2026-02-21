@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useTransition } from 'react';
-import { Mail, User, MessageSquare, Smartphone, CheckCircle, Package, Cloud, Server, Database } from 'lucide-react';
+import { Mail, User, MessageSquare, Smartphone, CheckCircle, Package, Truck } from 'lucide-react';
 
 interface ContactFormState {
   errors?: {
@@ -150,18 +150,18 @@ export default function RemitosPage() {
                 App de Repartos
               </h1>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Aplicación Android para el manejo de remitos y repartos con 
-                integración a la nube. Escanea, gestiona y haz seguimiento de tus entregas.
+                Aplicación Android para empresas de logística. Escanea remitos, 
+                gestiona repartos y haz seguimiento de tus entregas.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Features Section */}
+        {/* Benefits Section */}
         <section className="py-16 px-8 bg-white">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-800 mb-12 text-center">
-              Características Principales
+              ¿Cómo te ayuda?
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -171,12 +171,26 @@ export default function RemitosPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                    Escaneo con OCR
+                    Escanea remitos automáticamente
                   </h3>
                   <p className="text-gray-600">
-                    Escanea remitos usando OCR. Captura CUIT, nombre, 
-                    dirección y más automáticamente. Usa Cloud Vision API 
-                    para mayor precisión.
+                    Fotografía el remito y la app extrae los datos: CUIT, 
+                    dirección, cantidad de bultos y más.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start">
+                <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                  <Truck className="w-6 h-6 text-green-600" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                    Organiza tus repartos
+                  </h3>
+                  <p className="text-gray-600">
+                    Crea listas de reparto, asigna remitos y controla 
+                    qué falta entregar.
                   </p>
                 </div>
               </div>
@@ -187,25 +201,10 @@ export default function RemitosPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                    Gestión de Repartos
+                    Controla cada entrega
                   </h3>
                   <p className="text-gray-600">
-                    Crea listas de reparto, asigna remitos, obtén firmas 
-                    y cierra listas cuando todo esté entregado.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
-                  <CheckCircle className="w-6 h-6 text-green-600" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                    Seguimiento de Estados
-                  </h3>
-                  <p className="text-gray-600">
-                    Controla el estado de cada entrega: en depósito, 
+                    Sabés en qué estado está cada envío: en depósito, 
                     en tránsito, entregado o devuelto.
                   </p>
                 </div>
@@ -213,85 +212,17 @@ export default function RemitosPage() {
 
               <div className="flex items-start">
                 <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
-                  <Cloud className="w-6 h-6 text-green-600" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                    Sincronización en la Nube
-                  </h3>
-                  <p className="text-gray-600">
-                    Sincroniza tus datos con nuestro backend en Google Cloud. 
-                    Accede desde múltiples dispositivos.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
                   <CheckCircle className="w-6 h-6 text-green-600" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                    Auditoría Completa
+                    Sincronización en la nube
                   </h3>
                   <p className="text-gray-600">
-                    Historial de cambios de estado y ediciones con fechas, 
-                    razones y usuario que realizó cada cambio.
+                    Tus datos se sincronizan automáticamente. 
+                    Accedé desde cualquier dispositivo.
                   </p>
                 </div>
-              </div>
-
-              <div className="flex items-start">
-                <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
-                  <Server className="w-6 h-6 text-green-600" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                    Tecnología
-                  </h3>
-                  <p className="text-gray-600">
-                    Android app con Jetpack Compose. Backend en Go 
-                    desplegado en Google Cloud Run con PostgreSQL en Neon.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Backend Info */}
-        <section className="py-16 px-8 bg-gray-50">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
-              Arquitectura
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-white p-6 rounded-xl shadow-md text-center">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Smartphone className="w-6 h-6 text-blue-600" />
-                </div>
-                <h3 className="font-semibold text-gray-800 mb-2">App Android</h3>
-                <p className="text-sm text-gray-600">
-                  Jetpack Compose + Room + ML Kit
-                </p>
-              </div>
-              <div className="bg-white p-6 rounded-xl shadow-md text-center">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Server className="w-6 h-6 text-green-600" />
-                </div>
-                <h3 className="font-semibold text-gray-800 mb-2">Backend</h3>
-                <p className="text-sm text-gray-600">
-                  Go + Google Cloud Run
-                </p>
-              </div>
-              <div className="bg-white p-6 rounded-xl shadow-md text-center">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Database className="w-6 h-6 text-purple-600" />
-                </div>
-                <h3 className="font-semibold text-gray-800 mb-2">Base de Datos</h3>
-                <p className="text-sm text-gray-600">
-                  PostgreSQL en Neon
-                </p>
               </div>
             </div>
           </div>
@@ -302,10 +233,10 @@ export default function RemitosPage() {
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                ¿Te interesa esta app?
+                ¿Te interesa?
               </h2>
               <p className="text-gray-600">
-                Contáctanos para obtener más información sobre la app de remitos.
+                Contactanos para probar la app o discutir una solución personalizada.
               </p>
             </div>
 
