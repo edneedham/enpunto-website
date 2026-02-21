@@ -35,6 +35,26 @@ export default function Header() {
           <div className="hidden sm:ml-6 sm:flex sm:items-center flex-1 justify-end">
             <nav className="flex space-x-8">
               <Link
+                href="/plataforma"
+                className={`inline-flex items-center px-1 pt-1 border-b-2 ${
+                  pathname === '/plataforma'
+                    ? 'border-blue-500'
+                    : 'border-transparent'
+                } ${isActive('/plataforma')}`}
+              >
+                Plataforma
+              </Link>
+              <Link
+                href="/remitos"
+                className={`inline-flex items-center px-1 pt-1 border-b-2 ${
+                  pathname === '/remitos'
+                    ? 'border-blue-500'
+                    : 'border-transparent'
+                } ${isActive('/remitos')}`}
+              >
+                Remitos
+              </Link>
+              <Link
                 href="/contact"
                 className={`inline-flex items-center px-1 pt-1 border-b-2 ${
                   pathname === '/contact'
@@ -43,16 +63,6 @@ export default function Header() {
                 } ${isActive('/contact')}`}
               >
                 Contacto
-              </Link>
-              <Link
-                href="/about"
-                className={`inline-flex items-center px-1 pt-1 border-b-2 ${
-                  pathname === '/about'
-                    ? 'border-blue-500'
-                    : 'border-transparent'
-                } ${isActive('/about')}`}
-              >
-                Nosotros
               </Link>
             </nav>
           </div>
