@@ -112,15 +112,6 @@ export default async function PlataformaPage() {
                     </span>
                   </li>
                 </ul>
-                <div className="text-center">
-                  <Link
-                    href="/contact?subject=plataforma"
-                    className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200"
-                  >
-                    Notify Me
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </div>
               </div>
 
               {/* Right Card - For Vendors */}
@@ -160,16 +151,18 @@ export default async function PlataformaPage() {
                     </span>
                   </li>
                 </ul>
-                <div className="text-center">
-                  <Link
-                    href="/contact?subject=plataforma"
-                    className="inline-flex items-center px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors duration-200"
-                  >
-                    Notify Me
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </div>
               </div>
+            </div>
+
+            {/* Single CTA Button */}
+            <div className="text-center mt-10">
+              <Link
+                href="/contact?subject=plataforma"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200 text-lg"
+              >
+                Contactanos
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </div>
           </div>
         </section>
