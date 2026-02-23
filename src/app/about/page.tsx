@@ -23,7 +23,7 @@ export default async function About() {
             <div className="text-center">
               <Link
                 href="/signup"
-                className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors"
+                className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-600 transition-colors"
               >
                 Crear Cuenta Gratis
               </Link>
@@ -135,7 +135,7 @@ export default async function About() {
                     href="https://x.com/needhame"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-800 font-semibold p-2"
+                    className="text-blue-600 hover:text-blue-700 font-semibold p-2"
                   >
                     <Image
                       src="/logo-black.png"
@@ -148,7 +148,7 @@ export default async function About() {
                     href="https://linkedin.com/in/edward-needham/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-800 font-semibold p-2"
+                    className="text-blue-600 hover:text-blue-700 font-semibold p-2"
                   >
                     <Image
                       src="/InBug-Black.png"
@@ -194,7 +194,7 @@ export default async function About() {
                     href="https://www.linkedin.com/in/rominaguzmanar/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-800 font-semibold p-2"
+                    className="text-blue-600 hover:text-blue-700 font-semibold p-2"
                   >
                     <Image
                       src="/InBug-Black.png"
@@ -322,7 +322,7 @@ export default async function About() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/signup"
-                className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors"
+                className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-600 transition-colors"
               >
                 Empezar - Es Gratis
               </Link>

@@ -35,7 +35,7 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Plataforma - Marketplace */}
               <div className="bg-white border border-gray-200 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <div className="text-blue-700 mb-6 flex justify-center">
+                <div className="text-blue-600 mb-6 flex justify-center">
                   <Package size={64} />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
@@ -49,7 +49,7 @@ export default function Home() {
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-start">
                     <CheckCircle
-                      className="text-blue-700 mt-1 mr-3 flex-shrink-0"
+                      className="text-blue-600 mt-1 mr-3 flex-shrink-0"
                       size={20}
                     />
                     <span className="text-gray-700">
@@ -58,7 +58,7 @@ export default function Home() {
                   </li>
                   <li className="flex items-start">
                     <CheckCircle
-                      className="text-blue-700 mt-1 mr-3 flex-shrink-0"
+                      className="text-blue-600 mt-1 mr-3 flex-shrink-0"
                       size={20}
                     />
                     <span className="text-gray-700">
@@ -67,7 +67,7 @@ export default function Home() {
                   </li>
                   <li className="flex items-start">
                     <CheckCircle
-                      className="text-blue-700 mt-1 mr-3 flex-shrink-0"
+                      className="text-blue-600 mt-1 mr-3 flex-shrink-0"
                       size={20}
                     />
                     <span className="text-gray-700">
@@ -78,7 +78,7 @@ export default function Home() {
                 <div className="text-center">
                   <Link
                     href="/plataforma"
-                    className="inline-flex items-center px-6 py-3 bg-blue-700 text-white font-semibold rounded-lg hover:bg-blue-800 transition-colors duration-200"
+                    className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200"
                   >
                     Ver Plataforma
                     <ArrowRight className="ml-2 h-4 w-4" />

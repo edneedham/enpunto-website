@@ -43,7 +43,7 @@ export default async function PlataformaPage() {
               <div className="flex flex-col sm:flex-row gap-4 mb-6">
                 <Link
                   href="/contact?subject=plataforma"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200 text-lg shadow-lg hover:shadow-xl"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-600 transition-colors duration-200 text-lg shadow-lg hover:shadow-xl"
                 >
                   Contactanos para Recibir Actualizaciones
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -77,7 +77,7 @@ export default async function PlataformaPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Left Card - For Customers */}
               <div className="bg-white border border-gray-200 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <div className="text-blue-700 mb-6 flex justify-center">
+                <div className="text-blue-600 mb-6 flex justify-center">
                   <Package size={64} />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
@@ -86,7 +86,7 @@ export default async function PlataformaPage() {
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-start">
                     <CheckCircle
-                      className="text-blue-700 mt-1 mr-3 flex-shrink-0"
+                      className="text-blue-600 mt-1 mr-3 flex-shrink-0"
                       size={20}
                     />
                     <span className="text-gray-700">
@@ -95,7 +95,7 @@ export default async function PlataformaPage() {
                   </li>
                   <li className="flex items-start">
                     <CheckCircle
-                      className="text-blue-700 mt-1 mr-3 flex-shrink-0"
+                      className="text-blue-600 mt-1 mr-3 flex-shrink-0"
                       size={20}
                     />
                     <span className="text-gray-700">
@@ -104,7 +104,7 @@ export default async function PlataformaPage() {
                   </li>
                   <li className="flex items-start">
                     <CheckCircle
-                      className="text-blue-700 mt-1 mr-3 flex-shrink-0"
+                      className="text-blue-600 mt-1 mr-3 flex-shrink-0"
                       size={20}
                     />
                     <span className="text-gray-700">
@@ -158,7 +158,7 @@ export default async function PlataformaPage() {
             <div className="text-center mt-10">
               <Link
                 href="/contact?subject=plataforma"
-                className="inline-flex items-center px-8 py-4 bg-blue-700 text-white font-semibold rounded-lg hover:bg-blue-800 transition-colors duration-200 text-lg"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200 text-lg"
               >
                 Contactanos
                 <ArrowRight className="ml-2 h-5 w-5" />
