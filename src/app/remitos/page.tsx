@@ -140,13 +140,13 @@ export default function RemitosPage() {
     <div className="flex flex-col min-h-screen">
       <main className="grow">
         {/* Hero Section */}
-        <section className="py-16 px-8 bg-gradient-to-br from-green-50 via-white to-green-50">
+        <section className="py-16 px-8 bg-white border-b border-gray-200">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-8">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-green-100 rounded-full mb-6">
-                <Smartphone className="w-10 h-10 text-green-600" />
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-gray-100 rounded-full mb-6">
+                <Smartphone className="w-10 h-10 text-emerald-700" />
               </div>
-              <h1 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-4">
+              <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
                 App de Repartos
               </h1>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -158,19 +158,19 @@ export default function RemitosPage() {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-16 px-8 bg-white">
+        <section className="py-16 px-8 bg-gray-50">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-800 mb-12 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
               ¿Cómo te ayuda?
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
-                  <Package className="w-6 h-6 text-green-600" />
+                <div className="flex-shrink-0 w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center mr-4">
+                  <Package className="w-6 h-6 text-emerald-700" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
                     Escanea remitos automáticamente
                   </h3>
                   <p className="text-gray-600">
@@ -181,11 +181,11 @@ export default function RemitosPage() {
               </div>
 
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
-                  <Truck className="w-6 h-6 text-green-600" />
+                <div className="flex-shrink-0 w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center mr-4">
+                  <Truck className="w-6 h-6 text-emerald-700" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
                     Organiza tus repartos
                   </h3>
                   <p className="text-gray-600">
@@ -196,11 +196,11 @@ export default function RemitosPage() {
               </div>
 
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
-                  <CheckCircle className="w-6 h-6 text-green-600" />
+                <div className="flex-shrink-0 w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center mr-4">
+                  <CheckCircle className="w-6 h-6 text-emerald-700" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
                     Controla cada entrega
                   </h3>
                   <p className="text-gray-600">
@@ -211,11 +211,11 @@ export default function RemitosPage() {
               </div>
 
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
-                  <CheckCircle className="w-6 h-6 text-green-600" />
+                <div className="flex-shrink-0 w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center mr-4">
+                  <CheckCircle className="w-6 h-6 text-emerald-700" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
                     Sincronización en la nube
                   </h3>
                   <p className="text-gray-600">

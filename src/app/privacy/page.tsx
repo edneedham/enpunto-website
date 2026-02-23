@@ -677,9 +677,9 @@ export default async function Privacy() {
         </section>
 
         {/* Final CTA Section */}
-        <section className="py-20 px-8 bg-blue-50">
+        <section className="py-20 px-8 bg-gray-100">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-gray-800 mb-6 text-center">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6 text-center">
               ¿Preguntas?
             </h2>
 
@@ -691,7 +691,7 @@ export default async function Privacy() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors"
+                className="inline-block bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-800 transition-colors"
               >
                 Contactar
               </Link>

@@ -44,11 +44,11 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="bg-blue-50 rounded-lg p-6">
-              <h4 className="text-md font-semibold text-blue-900 mb-3">
+            <div className="bg-gray-100 rounded-lg p-6">
+              <h4 className="text-md font-semibold text-gray-900 mb-3">
                 ¿Por qué contactarnos?
               </h4>
-              <ul className="space-y-2 text-sm text-blue-800">
+              <ul className="space-y-2 text-sm text-gray-700">
                 <li>• Consultas sobre nuestros servicios</li>
                 <li>• Soporte técnico</li>
                 <li>• Sugerencias y feedback</li>

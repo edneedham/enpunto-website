@@ -309,9 +309,9 @@ export default async function About() {
         </section>
 
         {/* Final CTA Section */}
-        <section className="py-20 px-8 bg-blue-50">
+        <section className="py-20 px-8 bg-gray-100">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-gray-800 mb-6 text-center">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6 text-center">
               ¿Listo para transformar tu logística?
             </h2>
 
