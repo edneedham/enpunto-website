@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <defs>
+    <!-- Gradient for routes -->
+    <linearGradient id="routeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#006cff;stop-opacity:0.1"/>
+      <stop offset="50%" style="stop-color:#006cff;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#006cff;stop-opacity:0.1"/>
+    </linearGradient>
+    
+    <!-- Glowing dot -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Animated dot -->
+    <circle id="animatedDot" r="4" fill="#006cff" filter="url(#glow)">
+      <animateMotion 
+        dur="3s" 
+        repeatCount="indefinite"
+        calcMode="spline"
+        keySplines="0.4 0 0.2 1"
+      >
+        <mpath href="#routePath1"/>
+      </animateMotion>
+    </circle>
+    
+    <circle id="animatedDot2" r="4" fill="#006cff" filter="url(#glow)">
+      <animateMotion 
+        dur="4s" 
+        repeatCount="indefinite"
+        calcMode="spline"
+        keySplines="0.4 0 0.2 1"
+      >
+        <mpath href="#routePath2"/>
+      </animateMotion>
+    </circle>
+    
+    <circle id="animatedDot3" r="3" fill="#006cff" filter="url(#glow)">
+      <animateMotion 
+        dur="2.5s" 
+        repeatCount="indefinite"
+        calcMode="spline"
+        keySplines="0.4 0 0.2 1"
+      >
+        <mpath href="#routePath3"/>
+      </animateMotion>
+    </circle>
+    
+    <circle id="animatedDot4" r="3" fill="#006cff" filter="url(#glow)">
+      <animateMotion 
+        dur="3.5s" 
+        repeatCount="indefinite"
+        calcMode="spline"
+        keySplines="0.4 0 0.2 1"
+      >
+        <mpath href="#routePath4"/>
+      </animateMotion>
+    </circle>
+  </defs>
+  
+  <!-- Simplified Argentina outline -->
+  <g fill="none" stroke="#e5e7eb" stroke-width="1">
+    <!-- Rough Argentina shape -->
+    <path d="M200 30 
+             C220 35, 240 40, 255 50 
+             C280 70, 300 100, 310 140 
+             C320 180, 315 220, 305 260 
+             C295 300, 280 340, 255 370 
+             C240 390, 220 410, 200 430 
+             C180 450, 160 465, 140 475 
+             C120 485, 100 490, 85 485 
+             C70 480, 60 470, 55 455 
+             C50 440, 55 420, 70 395 
+             C85 370, 110 340, 130 310 
+             C150 280, 160 250, 165 220 
+             C170 190, 175 160, 180 130 
+             C185 100, 190 70, 200 30Z" 
+          fill="#f3f4f6" stroke="#d1d5db"/>
+  </g>
+  
+  <!-- Route paths (hidden) -->
+  <path id="routePath1" d="M200 100 L250 150 L280 200 L290 280 L270 350 L230 400" fill="none" stroke="none"/>
+  <path id="routePath2" d="M230 400 L180 360 L150 300 L130 220 L140 140 L170 80 L200 100" fill="none" stroke="none"/>
+  <path id="routePath3" d="M200 100 L220 180 L200 260 L180 320 L200 400" fill="none" stroke="none"/>
+  <path id="routePath4" d="M280 150 L260 220 L240 280 L260 350 L280 400" fill="none" stroke="none"/>
+  
+  <!-- Visible routes -->
+  <g stroke="url(#routeGradient)" stroke-width="2" fill="none" opacity="0.6">
+    <path d="M200 100 L250 150 L280 200 L290 280 L270 350 L230 400"/>
+    <path d="M230 400 L180 360 L150 300 L130 220 L140 140 L170 80 L200 100"/>
+    <path d="M200 100 L220 180 L200 260 L180 320 L200 400"/>
+    <path d="M280 150 L260 220 L240 280 L260 350 L280 400"/>
+  </g>
+  
+  <!-- City dots -->
+  <g fill="#006cff" filter="url(#glow)">
+    <!-- Buenos Aires -->
+    <circle cx="200" cy="400" r="6"/>
+    <circle cx="200" cy="400" r="3" fill="#fff"/>
+    
+    <!-- Córdoba -->
+    <circle cx="230" cy="320" r="5"/>
+    <circle cx="230" cy="320" r="2" fill="#fff"/>
+    
+    <!-- Rosario -->
+    <circle cx="200" cy="350" r="5"/>
+    <circle cx="200" cy="350" r="2" fill="#fff"/>
+    
+    <!-- Mendoza -->
+    <circle cx="140" cy="250" r="5"/>
+    <circle cx="140" cy="250" r="2" fill="#fff"/>
+    
+    <!-- Tucumán -->
+    <circle cx="280" cy="280" r="5"/>
+    <circle cx="280" cy="280" r="2" fill="#fff"/>
+    
+    <!-- Salta -->
+    <circle cx="290" cy="200" r="4"/>
+    <circle cx="290" cy="200" r="2" fill="#fff"/>
+    
+    <!-- Bariloche -->
+    <circle cx="100" cy="150" r="4"/>
+    <circle cx="100" cy="150" r="2" fill="#fff"/>
+    
+    <!-- Ushuaia -->
+    <circle cx="180" cy="460" r="4"/>
+    <circle cx="180" cy="460" r="2" fill="#fff"/>
+    
+    <!-- La Plata -->
+    <circle cx="230" cy="410" r="3"/>
+    <circle cx="230" cy="410" r="1.5" fill="#fff"/>
+    
+    <!-- Mar del Plata -->
+    <circle cx="220" cy="440" r="3"/>
+    <circle cx="220" cy="440" r="1.5" fill="#fff"/>
+  </g>
+  
+  <!-- Animated traffic dots -->
+  <use href="#animatedDot"/>
+  <use href="#animatedDot2"/>
+  <use href="#animatedDot3"/>
+  <use href="#animatedDot4"/>
+  
+  <!-- Additional floating dots -->
+  <circle r="2" fill="#006cff" opacity="0.5">
+    <animateMotion dur="2s" repeatCount="indefinite">
+      <mpath href="#routePath1"/>
+    </animateMotion>
+  </circle>
+  <circle r="2" fill="#006cff" opacity="0.5">
+    <animateMotion dur="3s" repeatCount="indefinite">
+      <mpath href="#routePath2"/>
+    </animateMotion>
+  </circle>
+</svg>

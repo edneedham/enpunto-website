@@ -55,9 +55,9 @@ export default async function PlataformaPage() {
             <div className="w-full md:w-1/2 flex justify-center md:justify-end">
               <div className="relative">
                 <Image
-                  src="/argentina.svg"
-                  alt="Mapa de Argentina"
-                  width={500}
+                  src="/argentina-traffic.svg"
+                  alt="Mapa de Argentina con tráfico"
+                  width={400}
                   height={500}
                   className="max-w-full h-auto"
                   priority
