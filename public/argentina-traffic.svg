@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600">
   <defs>
     <!-- Gradient for routes -->
     <linearGradient id="routeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#006cff;stop-opacity:0.1"/>
-      <stop offset="50%" style="stop-color:#006cff;stop-opacity:0.8"/>
-      <stop offset="100%" style="stop-color:#006cff;stop-opacity:0.1"/>
+      <stop offset="0%" style="stop-color:#006cff;stop-opacity:0"/>
+      <stop offset="50%" style="stop-color:#006cff;stop-opacity:0.6"/>
+      <stop offset="100%" style="stop-color:#006cff;stop-opacity:0"/>
     </linearGradient>
     
-    <!-- Glowing dot -->
+    <!-- Glowing effect -->
     <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
       <feMerge>
@@ -17,144 +17,189 @@
       </feMerge>
     </filter>
     
-    <!-- Animated dot -->
-    <circle id="animatedDot" r="4" fill="#006cff" filter="url(#glow)">
-      <animateMotion 
-        dur="3s" 
-        repeatCount="indefinite"
-        calcMode="spline"
-        keySplines="0.4 0 0.2 1"
-      >
-        <mpath href="#routePath1"/>
-      </animateMotion>
-    </circle>
-    
-    <circle id="animatedDot2" r="4" fill="#006cff" filter="url(#glow)">
-      <animateMotion 
-        dur="4s" 
-        repeatCount="indefinite"
-        calcMode="spline"
-        keySplines="0.4 0 0.2 1"
-      >
-        <mpath href="#routePath2"/>
-      </animateMotion>
-    </circle>
-    
-    <circle id="animatedDot3" r="3" fill="#006cff" filter="url(#glow)">
-      <animateMotion 
-        dur="2.5s" 
-        repeatCount="indefinite"
-        calcMode="spline"
-        keySplines="0.4 0 0.2 1"
-      >
-        <mpath href="#routePath3"/>
-      </animateMotion>
-    </circle>
-    
-    <circle id="animatedDot4" r="3" fill="#006cff" filter="url(#glow)">
-      <animateMotion 
-        dur="3.5s" 
-        repeatCount="indefinite"
-        calcMode="spline"
-        keySplines="0.4 0 0.2 1"
-      >
-        <mpath href="#routePath4"/>
-      </animateMotion>
-    </circle>
+    <!-- City glow -->
+    <filter id="cityGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
   
-  <!-- Simplified Argentina outline -->
-  <g fill="none" stroke="#e5e7eb" stroke-width="1">
-    <!-- Rough Argentina shape -->
-    <path d="M200 30 
-             C220 35, 240 40, 255 50 
-             C280 70, 300 100, 310 140 
-             C320 180, 315 220, 305 260 
-             C295 300, 280 340, 255 370 
-             C240 390, 220 410, 200 430 
-             C180 450, 160 465, 140 475 
-             C120 485, 100 490, 85 485 
-             C70 480, 60 470, 55 455 
-             C50 440, 55 420, 70 395 
-             C85 370, 110 340, 130 310 
-             C150 280, 160 250, 165 220 
-             C170 190, 175 160, 180 130 
-             C185 100, 190 70, 200 30Z" 
-          fill="#f3f4f6" stroke="#d1d5db"/>
+  <!-- Argentina map outline - simplified but recognizable -->
+  <g>
+    <!-- Main body of Argentina -->
+    <path 
+      d="M200 10 
+         C220 12, 235 18, 250 28 
+         C270 42, 285 60, 295 85 
+         C305 110, 310 140, 310 170 
+         C310 195, 305 215, 295 240 
+         C285 265, 275 290, 270 320 
+         C265 350, 268 380, 275 410 
+         C280 435, 278 455, 265 475 
+         C250 500, 225 520, 200 535 
+         C175 550, 155 555, 135 550 
+         C115 545, 100 530, 90 510 
+         C80 490, 75 465, 80 440 
+         C85 415, 95 390, 100 365 
+         C105 340, 105 315, 100 290 
+         C95 265, 90 240, 95 215 
+         C100 190, 115 165, 140 145 
+         C165 125, 180 105, 190 80 
+         C195 60, 198 40, 200 10Z" 
+      fill="#f3f4f6" 
+      stroke="#d1d5db" 
+      stroke-width="2"
+    />
+    
+    <!-- Falkland Islands -->
+    <ellipse cx="130" cy="545" rx="12" ry="8" fill="#e5e7eb" stroke="#d1d5db" stroke-width="1"/>
+    <ellipse cx="145" cy="540" rx="8" ry="5" fill="#e5e7eb" stroke="#d1d5db" stroke-width="1"/>
+    
+    <!-- South Georgia -->
+    <ellipse cx="120" cy="570" rx="6" ry="4" fill="#e5e7eb" stroke="#d1d5db" stroke-width="1"/>
   </g>
   
-  <!-- Route paths (hidden) -->
-  <path id="routePath1" d="M200 100 L250 150 L280 200 L290 280 L270 350 L230 400" fill="none" stroke="none"/>
-  <path id="routePath2" d="M230 400 L180 360 L150 300 L130 220 L140 140 L170 80 L200 100" fill="none" stroke="none"/>
-  <path id="routePath3" d="M200 100 L220 180 L200 260 L180 320 L200 400" fill="none" stroke="none"/>
-  <path id="routePath4" d="M280 150 L260 220 L240 280 L260 350 L280 400" fill="none" stroke="none"/>
-  
-  <!-- Visible routes -->
-  <g stroke="url(#routeGradient)" stroke-width="2" fill="none" opacity="0.6">
-    <path d="M200 100 L250 150 L280 200 L290 280 L270 350 L230 400"/>
-    <path d="M230 400 L180 360 L150 300 L130 220 L140 140 L170 80 L200 100"/>
-    <path d="M200 100 L220 180 L200 260 L180 320 L200 400"/>
-    <path d="M280 150 L260 220 L240 280 L260 350 L280 400"/>
-  </g>
-  
-  <!-- City dots -->
-  <g fill="#006cff" filter="url(#glow)">
-    <!-- Buenos Aires -->
-    <circle cx="200" cy="400" r="6"/>
-    <circle cx="200" cy="400" r="3" fill="#fff"/>
-    
-    <!-- Córdoba -->
-    <circle cx="230" cy="320" r="5"/>
-    <circle cx="230" cy="320" r="2" fill="#fff"/>
-    
-    <!-- Rosario -->
-    <circle cx="200" cy="350" r="5"/>
-    <circle cx="200" cy="350" r="2" fill="#fff"/>
-    
-    <!-- Mendoza -->
-    <circle cx="140" cy="250" r="5"/>
-    <circle cx="140" cy="250" r="2" fill="#fff"/>
-    
-    <!-- Tucumán -->
-    <circle cx="280" cy="280" r="5"/>
-    <circle cx="280" cy="280" r="2" fill="#fff"/>
-    
-    <!-- Salta -->
-    <circle cx="290" cy="200" r="4"/>
-    <circle cx="290" cy="200" r="2" fill="#fff"/>
-    
-    <!-- Bariloche -->
-    <circle cx="100" cy="150" r="4"/>
-    <circle cx="100" cy="150" r="2" fill="#fff"/>
-    
-    <!-- Ushuaia -->
-    <circle cx="180" cy="460" r="4"/>
-    <circle cx="180" cy="460" r="2" fill="#fff"/>
-    
-    <!-- La Plata -->
-    <circle cx="230" cy="410" r="3"/>
-    <circle cx="230" cy="410" r="1.5" fill="#fff"/>
-    
-    <!-- Mar del Plata -->
-    <circle cx="220" cy="440" r="3"/>
-    <circle cx="220" cy="440" r="1.5" fill="#fff"/>
+  <!-- Route paths -->
+  <g stroke="url(#routeGradient)" stroke-width="2" fill="none" opacity="0.7">
+    <!-- Buenos Aires to Córdoba -->
+    <path id="route1" d="M205 465 Q230 420 235 380"/>
+    <!-- Buenos Aires to Mendoza -->
+    <path id="route2" d="M205 465 Q160 420 145 320"/>
+    <!-- Córdoba to Tucumán -->
+    <path id="route3" d="M235 380 Q260 340 285 300"/>
+    <!-- Buenos Aires to Rosario -->
+    <path id="route4" d="M205 465 L200 440"/>
+    <!-- Córdoba to Salta -->
+    <path id="route5" d="M235 380 Q260 320 290 250"/>
+    <!-- Mendoza to San Rafael -->
+    <path id="route6" d="M145 320 Q130 290 120 260"/>
+    <!-- Rosario to Santa Fe -->
+    <path id="route7" d="M200 440 Q205 400 210 360"/>
+    <!-- Tucumán to Salta -->
+    <path id="route8" d="M285 300 Q295 270 300 230"/>
   </g>
   
   <!-- Animated traffic dots -->
-  <use href="#animatedDot"/>
-  <use href="#animatedDot2"/>
-  <use href="#animatedDot3"/>
-  <use href="#animatedDot4"/>
+  <g filter="url(#glow)">
+    <circle r="4" fill="#006cff">
+      <animateMotion dur="3s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1">
+        <mpath href="#route1"/>
+      </animateMotion>
+    </circle>
+    
+    <circle r="4" fill="#006cff">
+      <animateMotion dur="4s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1">
+        <mpath href="#route2"/>
+      </animateMotion>
+    </circle>
+    
+    <circle r="3" fill="#006cff">
+      <animateMotion dur="2.5s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1">
+        <mpath href="#route3"/>
+      </animateMotion>
+    </circle>
+    
+    <circle r="3" fill="#006cff">
+      <animateMotion dur="2s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1">
+        <mpath href="#route4"/>
+      </animateMotion>
+    </circle>
+    
+    <circle r="3" fill="#006cff">
+      <animateMotion dur="3.5s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1">
+        <mpath href="#route5"/>
+      </animateMotion>
+    </circle>
+    
+    <circle r="2.5" fill="#006cff">
+      <animateMotion dur="2.2s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1">
+        <mpath href="#route7"/>
+      </animateMotion>
+    </circle>
+    
+    <circle r="2.5" fill="#006cff">
+      <animateMotion dur="1.8s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1">
+        <mpath href="#route8"/>
+      </animateMotion>
+    </circle>
+  </g>
   
-  <!-- Additional floating dots -->
-  <circle r="2" fill="#006cff" opacity="0.5">
-    <animateMotion dur="2s" repeatCount="indefinite">
-      <mpath href="#routePath1"/>
-    </animateMotion>
-  </circle>
-  <circle r="2" fill="#006cff" opacity="0.5">
-    <animateMotion dur="3s" repeatCount="indefinite">
-      <mpath href="#routePath2"/>
-    </animateMotion>
-  </circle>
+  <!-- Cities -->
+  <g filter="url(#cityGlow)">
+    <!-- Buenos Aires -->
+    <g>
+      <circle cx="205" cy="465" r="8" fill="#006cff"/>
+      <circle cx="205" cy="465" r="4" fill="#fff"/>
+    </g>
+    
+    <!-- Córdoba -->
+    <g>
+      <circle cx="235" cy="380" r="6" fill="#006cff"/>
+      <circle cx="235" cy="380" r="3" fill="#fff"/>
+    </g>
+    
+    <!-- Rosario -->
+    <g>
+      <circle cx="200" cy="440" r="5" fill="#006cff"/>
+      <circle cx="200" cy="440" r="2.5" fill="#fff"/>
+    </g>
+    
+    <!-- Mendoza -->
+    <g>
+      <circle cx="145" cy="320" r="5" fill="#006cff"/>
+      <circle cx="145" cy="320" r="2.5" fill="#fff"/>
+    </g>
+    
+    <!-- Tucumán -->
+    <g>
+      <circle cx="285" cy="300" r="5" fill="#006cff"/>
+      <circle cx="285" cy="300" r="2.5" fill="#fff"/>
+    </g>
+    
+    <!-- Salta -->
+    <g>
+      <circle cx="300" cy="230" r="4" fill="#006cff"/>
+      <circle cx="300" cy="230" r="2" fill="#fff"/>
+    </g>
+    
+    <!-- Santa Fe -->
+    <g>
+      <circle cx="210" cy="360" r="4" fill="#006cff"/>
+      <circle cx="210" cy="360" r="2" fill="#fff"/>
+    </g>
+    
+    <!-- Mar del Plata -->
+    <g>
+      <circle cx="190" cy="505" r="4" fill="#006cff"/>
+      <circle cx="190" cy="505" r="2" fill="#fff"/>
+    </g>
+    
+    <!-- La Plata -->
+    <g>
+      <circle cx="225" cy="478" r="3" fill="#006cff"/>
+      <circle cx="225" cy="478" r="1.5" fill="#fff"/>
+    </g>
+    
+    <!-- Bariloche -->
+    <g>
+      <circle cx="110" cy="200" r="4" fill="#006cff"/>
+      <circle cx="110" cy="200" r="2" fill="#fff"/>
+    </g>
+    
+    <!-- Ushuaia -->
+    <g>
+      <circle cx="175" cy="540" r="3" fill="#006cff"/>
+      <circle cx="175" cy="540" r="1.5" fill="#fff"/>
+    </g>
+    
+    <!-- San Rafael -->
+    <g>
+      <circle cx="120" cy="260" r="3" fill="#006cff"/>
+      <circle cx="120" cy="260" r="1.5" fill="#fff"/>
+    </g>
+  </g>
 </svg>

@@ -58,7 +58,7 @@ export default async function PlataformaPage() {
                   src="/argentina-traffic.svg"
                   alt="Mapa de Argentina con tráfico"
                   width={400}
-                  height={500}
+                  height={600}
                   className="max-w-full h-auto"
                   priority
                 />
